@@ -1,23 +1,22 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import PracticeAreas from "./components/PracticeAreas";
-import Stats from "./components/Stats";
-import Testimonials from "./components/Testimonials";
+import ProfessionalBackground from "./components/ProfessionalBackground";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <>
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <Navbar />
-      <Hero />
-      <About />
-      <PracticeAreas />
-      <Stats />
-      <Testimonials />
-      <Contact />
+      <main id="main-content">
+        <Hero />
+        <ProfessionalBackground />
+        <About />
+        <Contact />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

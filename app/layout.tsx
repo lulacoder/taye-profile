@@ -1,66 +1,25 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Bodoni_Moda, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
+const editorial = Bodoni_Moda({ variable: "--font-editorial", subsets: ["latin"], display: "swap", weight: "400" });
+const body = DM_Sans({ variable: "--font-body", subsets: ["latin"], display: "swap" });
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
+const title = "Taye Bezabih Fino | Attorney and legal consultant in Addis Ababa";
+const description = "Learn about Taye Bezabih Fino, an Ethiopian attorney and former senior federal public prosecutor, and contact his Addis Ababa practice.";
 
 export const metadata: Metadata = {
-  title: "Taye Bezabih Fino Law Office | Attorney at Law | Addis Ababa",
-  description:
-    "Experienced Ethiopian attorney with over 23 years of legal expertise. Former Federal Prosecutor offering criminal defense, civil litigation, and legal advisory services in Addis Ababa.",
-  keywords: [
-    "Ethiopian lawyer",
-    "Addis Ababa attorney",
-    "criminal defense Ethiopia",
-    "civil litigation",
-    "legal advisor",
-    "Taye Bezabih Fino",
-    "law office Ethiopia",
-  ],
+  title,
+  description,
   authors: [{ name: "Taye Bezabih Fino" }],
-  openGraph: {
-    title: "Taye Bezabih Fino Law Office | Attorney at Law",
-    description:
-      "23+ years of dedicated legal service in Ethiopia. Former Federal Prosecutor, now your trusted advocate.",
-    type: "website",
-    locale: "en_US",
-    siteName: "Taye Bezabih Fino Law Office",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Taye Bezabih Fino Law Office",
-    description: "Experienced Ethiopian attorney with over 23 years of legal expertise.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  openGraph: { title, description, type: "website", locale: "en_US", siteName: "Taye Bezabih Fino" },
+  twitter: { card: "summary", title, description },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`${playfair.variable} ${inter.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en">
+      <body className={`${editorial.variable} ${body.variable}`}>{children}</body>
     </html>
   );
 }

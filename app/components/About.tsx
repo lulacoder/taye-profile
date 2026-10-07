@@ -1,108 +1,59 @@
-const timeline = [
-    {
-        year: '2002',
-        title: 'Federal Prosecutor',
-        description: 'Joined the Federal Public Prosecutor\'s office (Ministry of Justice), beginning nearly a decade of public service.',
-        icon: '⚖️',
-    },
-    {
-        year: '2011',
-        title: 'Private Practice',
-        description: 'Established independent practice as Attorney at Law and Legal Adviser, serving clients across Ethiopia.',
-        icon: '🏛️',
-    },
-    {
-        year: 'Today',
-        title: 'Law Office',
-        description: 'Operating Taye Bezabih Fino Law Office in Kirkos, Addis Ababa, with 23+ years of combined experience.',
-        icon: '🌟',
-    },
+import ArrowIcon from "./ArrowIcon";
+
+// Dates follow the supplied CV. Confirm the chronology with Taye before launch.
+const career = [
+  { period: "From 2012", role: "Attorney & legal consultant", organization: "Private practice, Addis Ababa", description: "Legal consultancy and advocacy before federal courts." },
+  { period: "2009 to 2012", role: "Environmental legal consultant", organization: "Community Based Cultural and Natural Resource Development Association", description: "Advised on environmental project compliance and organized community workshops on environmental law and natural-resource use." },
+  { period: "2002 to 2009", role: "Senior federal public prosecutor", organization: "Ethiopian Federal Ministry of Justice", description: "Reviewed criminal investigations, directed police investigations, and represented the government in federal court proceedings." },
+  { period: "1998 to 2002", role: "Regional public prosecutor", organization: "SNNPR Justice Bureau, Hawassa", description: "Served as a public prosecutor within the regional justice system." },
+  { period: "Early 1998", role: "Law-journal editor", organization: "SNNPR Regional State Supreme Court", description: "Prepared final Supreme Court decisions for publication as legal teaching and reference material." },
+  { period: "1991 to 1994", role: "Teacher", organization: "Ethiopian Ministry of Education, Arba Minch", description: "Taught primary-school students, including students with visual impairments, before pursuing a career in law." },
 ];
 
 export default function About() {
-    return (
-        <section id="about" className="section bg-background">
-            <div className="container mx-auto">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
-                    {/* Left Column - Image & Credentials */}
-                    <div className="relative">
-                        {/* Decorative frame */}
-                        <div className="absolute -inset-4 bg-gradient-to-br from-accent/20 to-primary/20 rounded-2xl blur-2xl" />
-
-                        {/* Main image container */}
-                        <div className="relative bg-primary rounded-2xl p-8 overflow-hidden">
-                            {/* Pattern overlay */}
-                            <div className="absolute inset-0 opacity-10">
-                                <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" strokeWidth="0.5" />
-                                    </pattern>
-                                    <rect width="100" height="100" fill="url(#grid)" />
-                                </svg>
-                            </div>
-
-                            {/* Photo placeholder with professional styling */}
-                            <div className="relative aspect-[3/4] rounded-xl overflow-hidden bg-primary-light flex items-center justify-center">
-                                <div className="text-center text-white/80 p-8">
-                                    <div className="text-7xl mb-4">⚖️</div>
-                                    <p className="text-lg font-medium" style={{ fontFamily: 'var(--font-playfair)' }}>
-                                        Ato Taye Bezabih Fino
-                                    </p>
-                                    <p className="text-sm text-white/60 mt-2">Attorney at Law</p>
-                                </div>
-                            </div>
-
-                            {/* Credentials badge */}
-                            <div className="absolute -bottom-4 -right-4 bg-accent text-white px-6 py-3 rounded-xl shadow-xl">
-                                <div className="text-2xl font-bold" style={{ fontFamily: 'var(--font-playfair)' }}>23+</div>
-                                <div className="text-xs uppercase tracking-wide">Years Experience</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Right Column - Content */}
-                    <div>
-                        <div className="accent-line !ml-0" />
-                        <h2 className="heading-lg mb-6">
-                            A Legacy of <span className="text-gradient">Justice</span>
-                        </h2>
-
-                        <p className="text-foreground-muted text-lg mb-6 leading-relaxed">
-                            Ato Taye Bezabih Fino is a distinguished Ethiopian attorney with over two decades
-                            of legal experience. His journey from Federal Prosecutor to trusted private counsel
-                            has equipped him with unparalleled expertise in both criminal and civil law.
-                        </p>
-
-                        <p className="text-foreground-muted mb-8 leading-relaxed">
-                            Educated at the prestigious Ethiopian Civil Service University, Ato Taye combines
-                            academic excellence with practical wisdom gained through years of courtroom experience.
-                            His commitment to justice and client advocacy has made him one of Addis Ababa&apos;s
-                            most respected legal professionals.
-                        </p>
-
-                        {/* Timeline */}
-                        <div className="space-y-6">
-                            {timeline.map((item, index) => (
-                                <div key={index} className="flex gap-4">
-                                    <div className="flex-shrink-0">
-                                        <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-xl">
-                                            {item.icon}
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="flex items-center gap-2 mb-1">
-                                            <span className="text-accent font-bold">{item.year}</span>
-                                            <span className="w-8 h-px bg-accent/30" />
-                                            <span className="font-semibold text-primary">{item.title}</span>
-                                        </div>
-                                        <p className="text-foreground-muted text-sm">{item.description}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+  return (
+    <>
+      <section id="profile" className="editorial-section page-shell" aria-labelledby="profile-heading">
+        <div>
+          <span className="eyebrow">01 / Profile</span>
+          <h2 id="profile-heading" className="section-heading">From public service to private practice.</h2>
+        </div>
+        <div className="profile-copy">
+          <p className="lead">Taye Bezabih Fino is an Ethiopian attorney and legal consultant based in Addis Ababa.</p>
+          <p>His professional background includes service as a senior federal public prosecutor at the Ministry of Justice and as a regional public prosecutor at the SNNPR Justice Bureau.</p>
+          <p>Before entering private practice, he also worked in legal publishing, legal training, and environmental NGO consultancy. His career began in education, teaching primary-school students in Arba Minch.</p>
+          <a href="#background" className="text-link">Explore his background <ArrowIcon /></a>
+        </div>
+      </section>
+      <section id="background" className="editorial-section page-shell" aria-labelledby="background-heading">
+        <div>
+          <span className="eyebrow">02 / Background</span>
+          <h2 id="background-heading" className="section-heading">A professional journey.</h2>
+        </div>
+        <ol className="timeline">
+          {career.map((item) => (
+            <li className="timeline-item" key={item.role}>
+              <span className="timeline-date">{item.period}</span>
+              <div>
+                <h3>{item.role}</h3>
+                <p className="timeline-organization">{item.organization}</p>
+                <p className="timeline-description">{item.description}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+      <section className="editorial-section page-shell" aria-labelledby="education-heading">
+        <div>
+          <span className="eyebrow">03 / Education</span>
+          <h2 id="education-heading" className="section-heading">Education &amp; training.</h2>
+        </div>
+        <dl className="education-list">
+          <div><dt>Bachelor of Law</dt><dd>Ethiopian Civil Service College, Addis Ababa.</dd></div>
+          <div><dt>Professional training</dt><dd>Criminal investigation, corruption and fraud, constitutional law, international humanitarian law, conflict resolution, and environmental legal education.</dd></div>
+          <div><dt>A foundation in teaching</dt><dd>Qualifications in primary teaching and teaching students with visual impairments.</dd></div>
+        </dl>
+      </section>
+    </>
+  );
 }
