@@ -1,3 +1,5 @@
+import ScrollTrack from "./ScrollTrack";
+
 // Course titles, issuers, and dates are CV-listed training records, not employment or membership.
 const training = [
   { title: "International humanitarian law & the law of armed conflict", issuer: "UNITAR correspondence programme in peacekeeping operations", date: "14 May 2007", dateTime: "2007-05-14" },
@@ -12,13 +14,15 @@ const training = [
 
 export default function Credentials() {
   return (
-    <section id="training" className="editorial-section page-shell" aria-labelledby="training-heading">
-      <div data-reveal>
-        <span className="eyebrow">03 / Training</span>
-        <h2 id="training-heading" className="section-heading">Selected professional training.</h2>
+    <section id="training" className="editorial-section editorial-section--wide page-shell" aria-labelledby="training-heading">
+      <div className="section-head" data-reveal>
+        <div>
+          <span className="eyebrow">03 / Training</span>
+          <h2 id="training-heading" className="section-heading">Selected professional training.</h2>
+        </div>
         <p className="section-caption">Courses and certificates listed in Taye&apos;s professional CV.</p>
       </div>
-      <ul className="training-list">
+      <ScrollTrack label="training courses">
         {training.map((item) => (
           <li className="training-item" key={item.title} data-reveal>
             <h3>{item.title}</h3>
@@ -32,7 +36,7 @@ export default function Credentials() {
           <h3>Certificate for teaching constitutional law</h3>
           <div className="training-meta"><p>Sidama Zone Justice Department, SNNPR</p></div>
         </li>
-      </ul>
+      </ScrollTrack>
     </section>
   );
 }

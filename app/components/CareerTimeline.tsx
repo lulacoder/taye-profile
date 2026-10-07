@@ -61,9 +61,9 @@ export default function CareerTimeline() {
         <h2 id="background-heading" className="section-heading">A professional journey.</h2>
       </div>
       <ol className="timeline">
-        {career.map((item) => (
+        {career.map((item, i) => (
           <li className="timeline-item" key={item.role} data-reveal>
-            <span className="timeline-date">{item.period}</span>
+            <span className={i === 0 ? "timeline-date is-current" : "timeline-date"}>{item.period}</span>
             <div>
               <h3>{item.role}</h3>
               <p className="timeline-organization">{item.organization}</p>

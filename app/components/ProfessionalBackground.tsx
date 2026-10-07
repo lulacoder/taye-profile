@@ -1,3 +1,4 @@
+import ArrowIcon from "./ArrowIcon";
 import { stagger } from "./stagger";
 
 const background = [
@@ -24,7 +25,10 @@ export default function ProfessionalBackground() {
       <h2 id="summary-heading" className="summary-heading" data-reveal>Professional<br />background</h2>
       {background.map((item, i) => (
         <div className="summary-item" key={item.number} data-reveal style={stagger(i + 1, 100)}>
-          <span className="number">{item.number}</span>
+          <div className="summary-top">
+            <span className="number">{item.number}</span>
+            <ArrowIcon />
+          </div>
           <div><h3>{item.title}</h3><p>{item.description}</p></div>
         </div>
       ))}
