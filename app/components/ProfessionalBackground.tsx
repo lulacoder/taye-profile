@@ -1,7 +1,19 @@
 const background = [
-  { number: "01", title: "Federal prosecution", description: "Public service within Ethiopia's federal justice system." },
-  { number: "02", title: "Legal consultancy", description: "Experience in environmental law and community legal education." },
-  { number: "03", title: "Private practice", description: "Legal consultation and court representation in Addis Ababa." },
+  {
+    number: "01",
+    title: "Federal prosecution",
+    description: "Served as a Senior Federal Public Prosecutor at the Ethiopian Federal Ministry of Justice, reviewing criminal investigations and representing the government before the Federal High Court and Federal Supreme Court.",
+  },
+  {
+    number: "02",
+    title: "Regional justice",
+    description: "Worked with the SNNPR Justice Bureau in prosecution, investigation oversight, government representation, NGO regulatory work, and training for police officers, prosecutors, and judges.",
+  },
+  {
+    number: "03",
+    title: "Private practice",
+    description: "Legal consultant and attorney at law in Addis Ababa since January 2012, following public prosecution and environmental legal consultancy.",
+  },
 ];
 
 export default function ProfessionalBackground() {
