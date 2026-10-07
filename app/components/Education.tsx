@@ -7,13 +7,13 @@ const education = [
 export default function Education() {
   return (
     <section id="education" className="editorial-section page-shell" aria-labelledby="education-heading">
-      <div>
+      <div data-reveal>
         <span className="eyebrow">04 / Education</span>
         <h2 id="education-heading" className="section-heading">Law &amp; education.</h2>
       </div>
       <dl className="education-list">
         {education.map((item) => (
-          <div key={item.qualification}>
+          <div key={item.qualification} data-reveal>
             <dt>{item.qualification}</dt>
             <dd>
               <span className="qualification-detail">{item.detail}</span>

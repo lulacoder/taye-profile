@@ -10,12 +10,14 @@ import Languages from "./components/Languages";
 import Approach from "./components/Approach";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ScrollEffects from "./components/ScrollEffects";
 
 // TODO: Add verified current practice areas after confirming them with Taye.
 export default function Home() {
   return (
     <>
       <a className="skip-link" href="#main-content">Skip to content</a>
+      <ScrollEffects />
       <Navbar />
       <main id="main-content">
         <Hero />

@@ -56,13 +56,13 @@ const career = [
 export default function CareerTimeline() {
   return (
     <section id="background" className="editorial-section page-shell" aria-labelledby="background-heading">
-      <div>
+      <div data-reveal>
         <span className="eyebrow">02 / Background</span>
         <h2 id="background-heading" className="section-heading">A professional journey.</h2>
       </div>
       <ol className="timeline">
         {career.map((item) => (
-          <li className="timeline-item" key={item.role}>
+          <li className="timeline-item" key={item.role} data-reveal>
             <span className="timeline-date">{item.period}</span>
             <div>
               <h3>{item.role}</h3>

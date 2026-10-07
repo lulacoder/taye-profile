@@ -1,13 +1,14 @@
 import ArrowIcon from "./ArrowIcon";
+import { stagger } from "./stagger";
 
 export default function About() {
   return (
     <section id="profile" className="editorial-section page-shell" aria-labelledby="profile-heading">
-      <div>
+      <div data-reveal>
         <span className="eyebrow">01 / Profile</span>
         <h2 id="profile-heading" className="section-heading">From public service to private practice.</h2>
       </div>
-      <div className="profile-copy">
+      <div className="profile-copy" data-reveal style={stagger(1, 120)}>
         <p className="lead">Taye Bezabih Fino is an Ethiopian attorney and legal consultant based in Addis Ababa, with more than 28 years of experience in the legal sector.</p>
         <p>His career spans regional and federal public prosecution, courtroom advocacy, legal advisory work, institutional training, environmental and natural-resource legal support, and legal education.</p>
         <p>Before entering private practice, he served as a Regional Public Prosecutor with the SNNPR Justice Bureau and later as a Senior Federal Public Prosecutor at the Ethiopian Federal Ministry of Justice. His work included overseeing criminal investigations, making prosecutorial decisions, representing government, and prosecuting proceedings before the Federal High Court and Federal Supreme Court.</p>

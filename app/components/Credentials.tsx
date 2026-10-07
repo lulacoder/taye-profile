@@ -13,14 +13,14 @@ const training = [
 export default function Credentials() {
   return (
     <section id="training" className="editorial-section page-shell" aria-labelledby="training-heading">
-      <div>
+      <div data-reveal>
         <span className="eyebrow">03 / Training</span>
         <h2 id="training-heading" className="section-heading">Selected professional training.</h2>
         <p className="section-caption">Courses and certificates listed in Taye&apos;s professional CV.</p>
       </div>
       <ul className="training-list">
         {training.map((item) => (
-          <li className="training-item" key={item.title}>
+          <li className="training-item" key={item.title} data-reveal>
             <h3>{item.title}</h3>
             <div className="training-meta">
               <p>{item.issuer}</p>
@@ -28,7 +28,7 @@ export default function Credentials() {
             </div>
           </li>
         ))}
-        <li className="training-item">
+        <li className="training-item" data-reveal>
           <h3>Certificate for teaching constitutional law</h3>
           <div className="training-meta"><p>Sidama Zone Justice Department, SNNPR</p></div>
         </li>
