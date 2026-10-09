@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section id="contact" className="contact-section page-shell" aria-labelledby="contact-heading">
       <div data-reveal>
-        <span className="eyebrow">07 / Contact</span>
+        <span className="eyebrow">06 / Contact</span>
         <h2 id="contact-heading" className="contact-heading">Get in touch.</h2>
         <p className="contact-copy">Contact Taye to discuss your legal matter and arrange a consultation.</p>
         <a href={contact.phoneHref} className="button">Call Taye <ArrowIcon /></a>

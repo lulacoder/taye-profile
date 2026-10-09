@@ -23,16 +23,14 @@ export default function Hero() {
       </div>
       <figure>
         <div className="portrait-frame">
-          {/* Temporary concept image. Replace with Taye's approved portrait before launch. */}
           <Image
-            src="/images/concept-portrait.png"
-            alt="Generated concept portrait of a fictional attorney, to be replaced with Taye's photograph"
+            src="/images/taye-office-portrait.png"
+            alt="AI-generated portrait of Taye Bezabih Fino seated behind an office desk in a blue suit"
             fill
             preload
             sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1100px) 46vw, 44vw"
           />
         </div>
-        <figcaption className="portrait-caption">Concept portrait</figcaption>
       </figure>
     </section>
   );

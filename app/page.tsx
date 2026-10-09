@@ -6,7 +6,6 @@ import About from "./components/About";
 import CareerTimeline from "./components/CareerTimeline";
 import Credentials from "./components/Credentials";
 import Education from "./components/Education";
-import Languages from "./components/Languages";
 import Approach from "./components/Approach";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -27,7 +26,6 @@ export default function Home() {
         <CareerTimeline />
         <Credentials />
         <Education />
-        <Languages />
         <Approach />
         <Contact />
       </main>

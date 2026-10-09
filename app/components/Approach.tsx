@@ -4,7 +4,7 @@ export default function Approach() {
   return (
     <section id="approach" className="editorial-section page-shell" aria-labelledby="approach-heading">
       <div data-reveal>
-        <span className="eyebrow">06 / Approach</span>
+        <span className="eyebrow">05 / Approach</span>
         <h2 id="approach-heading" className="section-heading">Knowledge &amp; communication.</h2>
       </div>
       <div className="profile-copy" data-reveal style={stagger(1, 120)}>
