@@ -5,6 +5,15 @@ import "./globals.css";
 const editorial = Bodoni_Moda({ variable: "--font-editorial", subsets: ["latin"], display: "swap", weight: "400" });
 const body = DM_Sans({ variable: "--font-body", subsets: ["latin"], display: "swap" });
 
+// Netlify inserts whitespace beside its hosting comment. Remove those text
+// nodes before hydration so React can reuse the page instead of rebuilding it.
+const initializePage = `
+  for (const node of Array.from(document.head.childNodes)) {
+    if (node.nodeType === Node.TEXT_NODE && !node.textContent.trim()) node.remove();
+  }
+  document.documentElement.classList.add('js');
+`;
+
 const title = "Taye Bezabih Fino | Attorney & Legal Consultant in Addis Ababa";
 const description = "Taye Bezabih Fino is an Ethiopian attorney and former Senior Federal Public Prosecutor with more than 28 years of legal-sector experience across prosecution, courtroom advocacy, legal advisory work, and institutional training.";
 
@@ -21,7 +30,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        <script dangerouslySetInnerHTML={{ __html: initializePage }} />
       </head>
       <body className={`${editorial.variable} ${body.variable}`}>{children}</body>
     </html>
