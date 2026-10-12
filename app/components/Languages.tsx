@@ -1,0 +1,21 @@
+import { stagger } from "./stagger";
+
+// Confirm Taye's preferred spellings and service-level fluency before launch.
+const languages = ["English", "Amharic", "Wolayta", "Gofa", "Basketo"];
+
+export default function Languages() {
+  return (
+    <section id="languages" className="editorial-section page-shell" aria-labelledby="languages-heading">
+      <div data-reveal>
+        <span className="eyebrow">05 / Languages</span>
+        <h2 id="languages-heading" className="section-heading">Languages.</h2>
+      </div>
+      <div>
+        <p className="section-introduction" data-reveal style={stagger(1, 100)}>Languages listed in Taye&apos;s professional CV include:</p>
+        <ul className="language-list">
+          {languages.map((language, i) => <li key={language} data-reveal style={stagger(i + 2, 70)}>{language}</li>)}
+        </ul>
+      </div>
+    </section>
+  );
+}
